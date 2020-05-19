@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const shorten = require('./routes/shorten');
+const reroute = require('./routes/reroute');
 
 dotenv.config();
 
@@ -18,7 +19,8 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(express.json());
-app.use("/shorten",shorten);
+app.use("",reroute);
+app.use("",shorten);
 app.listen(PORT,() => {
     console.log(`Server running on ${PORT}...`);
 });
