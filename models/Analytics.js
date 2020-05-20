@@ -1,14 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Analytics = mongoose.Schema({
     short: {
         type: String,
-        required: true
+        required: true,
     },
-    clicks : {
+    clicks: {
         type: Number,
-        default: 0
-    }
+        default: 0,
+    },
 });
 
-module.exports = mongoose.model('Analytics',Analytics);
+module.exports = mongoose.model("Analytics", Analytics);
